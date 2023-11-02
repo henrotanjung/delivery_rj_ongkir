@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_delivery_carrier_form_with_provider_rj_ongkir" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.provider.rj.ongkir</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='destination']" position='before'>
+                <page string="Raja Ongkir Configuration" attrs="{'invisible': [('delivery_type', '!=', 'rj_ongkir')]}">
+                    <group>
+                        <group>
+                            <field name="token" attrs="{'required': [('delivery_type', '=', 'rj_ongkir')]}"/>
+                            <field name="conn" attrs="{'required': [('delivery_type', '=', 'rj_ongkir')]}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- <record id="view_picking_withcarrier_out_form_inherit_delivery_ups" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.ups</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='carrier_id']" position="attributes">
+                <attribute name="domain">[('ups_cod', '=', False)]</attribute>
+            </xpath>
+        </field>
+    </record> -->
+</odoo>

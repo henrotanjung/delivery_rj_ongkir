@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_order_form_inherit_delivery_rj_ongkir" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.delivery.rj_ongkir</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='carrier_id']" position="after">
+                <!-- <field name="rj_ongkir_bill_my_account" invisible="1"/> -->
+                <field name="rj_ongkir_carrier_account" invisible="1"/>
+                <field name="rj_ongkir_service_account_code"/>
+                <field name="rj_ongkir_service_type" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
