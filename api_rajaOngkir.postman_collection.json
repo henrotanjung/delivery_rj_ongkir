@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "67ccfcbe-63a4-45ca-9fa0-3962ffcaa288",
+		"name": "api_rajaOngkir",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api.rajaongkir.com/starter/province",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "5e43b982dcb5a3d775641f9d380996f8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.rajaongkir.com/starter/province",
+					"host": [
+						"api",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"starter",
+						"province"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api.rajaongkir.com/starter/cost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "5e43b982dcb5a3d775641f9d380996f8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "origin",
+							"value": "501",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "114",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "1700",
+							"type": "text"
+						},
+						{
+							"key": "courier",
+							"value": "jne",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rajaongkir.com/starter/cost",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"starter",
+						"cost"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "501",
+							"disabled": true
+						},
+						{
+							"key": "destination",
+							"value": "114",
+							"disabled": true
+						},
+						{
+							"key": "weight",
+							"value": "1700",
+							"disabled": true
+						},
+						{
+							"key": "courier",
+							"value": "jne",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api.rajaongkir.com/starter/city",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "5e43b982dcb5a3d775641f9d380996f8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.rajaongkir.com/starter/city",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"starter",
+						"city"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
